@@ -126,7 +126,6 @@ def main():
                 data_frame = create_table(
                     data_frame, roles_list, account["id"], account["name"]
                 )
-                # logger.info(table)
             except ClientError as error:
                 logger.error(f"Failed to assume role: {role_arn} " + str(error))
         write_to_excel(data_frame)
